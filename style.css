@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #05080f;
+  color: #e5e7eb;
+  scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(5,8,15,0.7);
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero h2 {
+  font-family: 'JetBrains Mono', monospace;
+  color: #38bdf8;
+  margin: 15px 0;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 8px;
+  display: inline-block;
+}
+
+.primary {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #000;
+}
+
+.secondary {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* ================= SECTIONS BASE ================= */
+.section {
+  position: relative;
+  padding: 100px 10%;
+  overflow: hidden;
+}
+
+.section h3 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* ================= SECTION BACKGROUNDS ================= */
+
+/* ABOUT */
+.section-about {
+  background:
+    radial-gradient(circle at top left, rgba(56,189,248,0.12), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(99,102,241,0.12), transparent 60%);
+}
+
+/* SKILLS */
+.section-skills {
+  background:
+    linear-gradient(180deg, rgba(99,102,241,0.08), transparent),
+    radial-gradient(circle at center, rgba(56,189,248,0.10), transparent 70%);
+}
+
+.section-skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* PROJECTS */
+.section-projects {
+  background:
+    radial-gradient(circle at top, rgba(99,102,241,0.15), transparent 65%),
+    linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}
+
+/* EDUCATION / EXPERIENCE */
+.section-education {
+  background:
+    radial-gradient(circle at left, rgba(56,189,248,0.10), transparent 60%),
+    radial-gradient(circle at right, rgba(99,102,241,0.10), transparent 60%);
+}
+
+/* SECTION SEPARATOR */
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(56,189,248,0.5),
+    transparent
+  );
+}
+
+/* ================= SKILLS & PROJECTS ================= */
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card,
+.project-card {
+  background: rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.4);
+}
+
+/* ================= TIMELINE ================= */
+.timeline-item {
+  margin-bottom: 20px;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ================= CONTACT ================= */
+.contact-modern {
+  background:
+    radial-gradient(circle at top, rgba(56,189,248,0.08), transparent);
+}
+
+.contact-intro {
+  max-width: 700px;
+  margin-bottom: 50px;
+  opacity: 0.85;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info {
+  display: grid;
+  gap: 20px;
+}
+
+.info-box {
+  background: rgba(255,255,255,0.06);
+  padding: 18px;
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+}
+
+.info-box span {
+  font-size: 0.85rem;
+  color: #38bdf8;
+}
+
+.info-box a,
+.info-box p {
+  margin-top: 5px;
+  display: block;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.contact-form-modern input,
+.contact-form-modern textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 20px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== PROJECTS – CASE STUDY STYLE ===== */
+.projects-intro {
+  max-width: 750px;
+  opacity: 0.85;
+  margin-bottom: 50px;
+}
+
+.projects-showcase {
+  display: grid;
+  gap: 40px;
+}
+
+.project-case {
+  background: rgba(255,255,255,0.07);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.project-case:hover {
+  transform: translateY(-6px);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-header h4 {
+  font-size: 1.3rem;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(56,189,248,0.15);
+  color: #38bdf8;
+}
+
+.project-desc {
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.project-case ul {
+  margin: 10px 0 15px 20px;
+  line-height: 1.8;
+}
+
+.tech-stack {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+/* PROJECT IMAGES */
+.project-image {
+  width: 60px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 10px 20px rgba(56,189,248,0.4));
+  transition: transform 0.4s ease;
+}
+
+.project-case:hover .project-image {
+  transform: translateY(-6px) scale(1.05);
+}
