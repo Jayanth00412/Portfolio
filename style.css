@@ -403,3 +403,53 @@ footer {
     display: none;
   }
 }
+/* ===== MOBILE NAVBAR FIX ===== */
+@media (max-width: 768px) {
+
+  /* Hide normal nav links on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Adjust navbar spacing */
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  /* Keep logo readable */
+  .logo {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Ensure 3-dot menu is visible */
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+  }
+}
+/* ===== MOBILE NAVBAR FIX ===== */
+@media (max-width: 768px) {
+
+  /* Hide normal nav links on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Adjust navbar spacing */
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  /* Keep logo readable */
+  .logo {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Ensure 3-dot menu is visible */
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+  }
+}
