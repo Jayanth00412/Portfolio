@@ -350,3 +350,56 @@ footer {
 .project-case:hover .project-image {
   transform: translateY(-6px) scale(1.05);
 }
+/* Three Dot Icon */
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  color: #cbd5f5;
+  padding-left: 20px;
+}
+
+.menu-toggle:hover {
+  color: #38bdf8;
+}
+
+/* Slide Menu Panel */
+.slide-menu {
+  position: fixed;
+  top: 70px;
+  right: -220px;
+  width: 200px;
+  background: rgba(5,8,15,0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 15px;
+  transition: right 0.35s ease;
+  z-index: 2000;
+}
+
+.slide-menu a {
+  display: block;
+  padding: 12px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #e5e7eb;
+  background: rgba(255,255,255,0.05);
+  transition: background 0.3s ease;
+}
+
+.slide-menu a:hover {
+  background: rgba(56,189,248,0.15);
+  color: #38bdf8;
+}
+
+/* Active State */
+.slide-menu.open {
+  right: 20px;
+}
+
+/* Hide dots on desktop if you want (optional) */
+@media (min-width: 900px) {
+  .menu-toggle {
+    display: none;
+  }
+}
