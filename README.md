@@ -3,7 +3,7 @@
 A modern **developer portfolio website** built to showcase my **skills, projects, education, and experience** in a clean and professional way.
 
 🔗 **Live Site:**  
-https://Jayanth00412.github.io/portfolio/
+https://jayanth00412.github.io/Portfolio/
 
 👤 About Me
 
