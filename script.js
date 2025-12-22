@@ -88,3 +88,6 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+function toggleMenu() {
+  document.getElementById("slideMenu").classList.toggle("open");
+}
