@@ -27,15 +27,27 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="logo">JK.dev</div>
-  <ul>
+  <div class="logo">Jayanth Portfolio</div>
+  <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
+  <!-- Three Dot Menu -->
+  <div class="menu-toggle" onclick="toggleMenu()">⋮</div>
 </nav>
+
+<!-- SLIDE MENU -->
+<div id="slideMenu" class="slide-menu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -61,8 +73,7 @@
     I am an engineering student and full stack developer with a strong interest in
     building modern web applications, AI-powered systems, and automation solutions.
     I enjoy solving real-world problems through clean code, scalable architectures,
-    and emerging technologies. My career focus is on internships and entry-level
-    software roles where I can continuously learn and contribute.
+    and emerging technologies.
   </p>
 </section>
 
@@ -71,18 +82,16 @@
   <h3>Skills & Tech Stack</h3>
   <div class="skills-grid">
     <div class="skill-card">Java</div>
-    <div class="skill-card">Python</div>
+    <div class="skill-card">Python (Basics)</div>
     <div class="skill-card">JavaScript</div>
     <div class="skill-card">HTML & CSS</div>
-    <div class="skill-card">React (Basics)</div>
-    <div class="skill-card">Node.js</div>
-    <div class="skill-card">Express.js</div>
+    <div class="skill-card">MERN</div>
     <div class="skill-card">REST APIs</div>
-    <div class="skill-card">MySQL</div>
+    <div class="skill-card">NoSQL / MySQL</div>
     <div class="skill-card">MongoDB</div>
     <div class="skill-card">Git & GitHub</div>
     <div class="skill-card">AI / ML Basics</div>
-    <div class="skill-card">DSA & OOP</div>
+    <div class="skill-card">DSA & OOPS</div>
   </div>
 </section>
 
@@ -254,6 +263,13 @@
   </div>
 
   <div class="info-box">
+    <span>📞 Phone</span>
+    <a href="tel:+918867353499" target="_blank" rel="noopener noreferrer">
+      +91 88673 53499
+    </a>
+  </div>
+
+  <div class="info-box">
     <span>💼 LinkedIn</span>
     <a href="https://www.linkedin.com/in/jayanth-kumar-n"
        target="_blank"
@@ -290,7 +306,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Jayanth Kumar N | Full Stack Developer</p>
+  <p>© 2025 Jayanth Kumar N |8867353499| Full Stack Developer</p>
 </footer>
 
 <!-- PROJECT MODALS -->
@@ -382,5 +398,12 @@
 
 
 <script src="script.js"></script>
+
+<!-- MENU SCRIPT -->
+<script>
+  function toggleMenu() {
+    document.getElementById("slideMenu").classList.toggle("open");
+  }
+</script>
 </body>
 </html>
