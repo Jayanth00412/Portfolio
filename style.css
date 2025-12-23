@@ -350,25 +350,28 @@ footer {
 .project-case:hover .project-image {
   transform: translateY(-6px) scale(1.05);
 }
-/* Three Dot Icon */
+/* ================= THREE DOT MENU ================= */
+
+/* Three Dot Icon (default hidden) */
 .menu-toggle {
   font-size: 26px;
   cursor: pointer;
   color: #cbd5f5;
-  padding-left: 20px;
+  margin-left: auto;
+  display: none; /* hidden by default */
 }
 
 .menu-toggle:hover {
   color: #38bdf8;
 }
 
-/* Slide Menu Panel */
+/* ================= SLIDE MENU ================= */
 .slide-menu {
   position: fixed;
   top: 70px;
-  right: -220px;
-  width: 200px;
-  background: rgba(5,8,15,0.95);
+  right: -240px;
+  width: 220px;
+  background: rgba(5, 8, 15, 0.95);
   backdrop-filter: blur(12px);
   border-radius: 14px;
   padding: 15px;
@@ -383,73 +386,53 @@ footer {
   border-radius: 10px;
   text-decoration: none;
   color: #e5e7eb;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   transition: background 0.3s ease;
 }
 
 .slide-menu a:hover {
-  background: rgba(56,189,248,0.15);
+  background: rgba(56, 189, 248, 0.15);
   color: #38bdf8;
 }
 
-/* Active State */
+/* Open state */
 .slide-menu.open {
   right: 20px;
 }
 
-/* Hide dots on desktop if you want (optional) */
-@media (min-width: 900px) {
+/* ================= DESKTOP VIEW ================= */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    margin-left: auto;
+    gap: 28px;
+  }
+
   .menu-toggle {
-    display: none;
+    display: none; /* hide dots on desktop */
   }
 }
-/* ===== MOBILE NAVBAR FIX ===== */
+
+/* ================= MOBILE VIEW ================= */
 @media (max-width: 768px) {
 
-  /* Hide normal nav links on mobile */
+  /* Hide normal nav links */
   .nav-links {
     display: none;
   }
 
-  /* Adjust navbar spacing */
-  .navbar {
-    padding: 14px 20px;
-  }
-
-  /* Keep logo readable */
-  .logo {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
-  /* Ensure 3-dot menu is visible */
+  /* Show 3-dot menu */
   .menu-toggle {
     display: block;
     font-size: 24px;
   }
-}
-/* ===== MOBILE NAVBAR FIX ===== */
-@media (max-width: 768px) {
 
-  /* Hide normal nav links on mobile */
-  .nav-links {
-    display: none;
-  }
-
-  /* Adjust navbar spacing */
   .navbar {
     padding: 14px 20px;
   }
 
-  /* Keep logo readable */
   .logo {
     font-size: 1rem;
     white-space: nowrap;
-  }
-
-  /* Ensure 3-dot menu is visible */
-  .menu-toggle {
-    display: block;
-    font-size: 24px;
   }
 }
