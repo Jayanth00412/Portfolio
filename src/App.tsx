@@ -223,7 +223,7 @@ export default function App() {
   // Safe resume mock downloader
   const handleDownloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/Jayanth_Kumar_N_Resume.pdf";
+ link.href = "/Portfolio/Jayanth_Kumar_N_Resume.pdf";
   link.download = "Jayanth_Kumar_N_Resume.pdf";
   document.body.appendChild(link);
   link.click();
@@ -403,7 +403,7 @@ export default function App() {
 
     {/* Resume Download Button */}
     <a
-      href="/Jayanth_Kumar_N_Resume.pdf"
+     href="/Portfolio/Jayanth_Kumar_N_Resume.pdf"
       download
       className="border border-[#00F5FF] text-[#00F5FF] font-black text-[10px] uppercase tracking-widest px-3.5 py-1.5 hover:bg-[#00F5FF]/10 transition-colors cursor-pointer"
     >
@@ -539,19 +539,16 @@ export default function App() {
   <div className="absolute w-[200px] h-[200px] bg-cyan-500/10 rounded-full blur-[80px] translate-x-20" />
 
   {/* Profile Photo */}
+{/* Profile Photo */}
 <div className="relative z-10">
-  <div className="absolute inset-0 rounded-full bg-cyan-500/30 blur-3xl animate-pulse"></div>
-
-  <img
-    src="/profile.jpeg"
-    alt="Jayanth Kumar N"
-    className="relative w--80d:w-80 md:h-80 object-cover object-top rounded-full border-4 border-cyan-400 shadow-[0_0_50px_rgba(0,245,255,0.8)]"
-     style={{
-    objectPosition: "center 10%"
+ <img
+  src="/Portfolio/profile.jpg"
+  alt="Jayanth Kumar N"
+  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-cyan-400"
+  style={{
+    objectPosition: "center top"
   }}
-  />
-
-  <div className="absolute -inset-2 border border-cyan-400 rounded-full animate-spin"></div>
+/>
 </div>
 
   {/* 3D Laptop */}
@@ -979,7 +976,7 @@ export default function App() {
                     <p className="text-slate-500 mb-3 text-left uppercase font-bold tracking-wider">Public Decryption Matrices</p>
                     <div className="flex items-center gap-3">
                       <a
-                        href="https://github.com/jayanthkumarn870"
+                        href="https://github.com/Jayanth00412"
                         target="_blank"
                         rel="noreferrer"
                         className="bg-slate-950 border border-white/10 p-3 rounded-xl hover:text-cyan-400 hover:border-cyan-400/40 transition-all duration-300 flex items-center justify-center cursor-pointer"
