@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Jayanth Kumar N Portfolio
+My personal portfolio website built using React, TypeScript, Vite, and Tailwind CSS.
 
-# Run and deploy your AI Studio app
+## Live Website
+🌐 https://jayanth00412.github.io/Portfolio/
 
-This contains everything you need to run your app locally.
+## About
+I am an Information Science Engineering student passionate about Software Development, Web Development, and Data Analytics.
+This portfolio showcases:
+- Skills
+- Projects
+- Education
+- Certifications
+- Resume
+- Contact Information
 
-View your app in AI Studio: https://ai.studio/apps/0affd500-8869-4638-b746-e428a1a8ef46
+## Technologies Used
+- React.js
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- GitHub Pages
+
+## Projects
+- ScanGluco – AI-based Diabetes Monitoring App
+- Travel Explorer Website
+- Pneumonia Detection System
+- Citizen Safety App
 
 ## Run Locally
+Clone the project:
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+git clone https://github.com/Jayanth00412/Portfolio.git
