@@ -274,15 +274,6 @@ export default function App() {
   setIsTransmitting(false);
 };
 
-    // Simulate cyber socket packet upload transmission
-    setTimeout(() => {
-      setIsTransmitting(false);
-      setTransmitSuccess(true);
-      setContactForm({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setTransmitSuccess(false), 5000);
-    }, 2500);
-  };
-
   // Categories extraction
   const CATEGORIES = ["all", "Frontend", "Machine Learning", "Databases"];
 
