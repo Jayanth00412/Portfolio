@@ -29,6 +29,7 @@ import LaptopCanvas from "./components/LaptopCanvas";
 import SkillsUniverse from "./components/SkillsUniverse";
 import DashboardSection from "./components/DashboardSection";
 import JarvisWidget from "./components/JarvisWidget";
+import emailjs from "@emailjs/browser";
 
 export default function App() {
   // System Boot States
@@ -230,12 +231,48 @@ export default function App() {
   document.body.removeChild(link);
 };
   // Send message mock with interactive visual streams
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!contactForm.name || !contactForm.email || !contactForm.message) return;
+ const handleContactSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    setIsTransmitting(true);
-    setTransmitSuccess(false);
+  if (
+    !contactForm.name ||
+    !contactForm.email ||
+    !contactForm.message
+  )
+    return;
+
+  setIsTransmitting(true);
+
+  try {
+    await emailjs.send(
+      "service_zepmzei",
+      "template_u9r8upv",
+      {
+        name: contactForm.name,
+        email: contactForm.email,
+        subject: contactForm.subject,
+        message: contactForm.message,
+      },
+      "UpnGcicm7bZr2-A_T"
+    );
+
+    setTransmitSuccess(true);
+
+    setContactForm({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
+    setTimeout(() => setTransmitSuccess(false), 5000);
+  } catch (error) {
+    alert("Failed to send message.");
+    console.error(error);
+  }
+
+  setIsTransmitting(false);
+};
 
     // Simulate cyber socket packet upload transmission
     setTimeout(() => {

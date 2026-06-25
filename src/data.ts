@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
       "Sub-second layout query responses"
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "REST APIs"],
-    githubUrl: "https://github.com/jayanthkumarn870",
+    githubUrl: "https://github.com/Jayanth00412",
     liveUrl: "https://jayanthkumarn870.github.io",
     glowColor: "#00F5FF"
   },
@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
       "Simulates real industrial paper-work digitizing flows"
     ],
     technologies: ["React Native", "Python", "Tesseract", "EasyOCR", "PyTorch", "Machine Learning"],
-    githubUrl: "https://github.com/jayanthkumarn870",
+    githubUrl: "https://github.com/Jayanth00412",
     liveUrl: "#scangluco-demo",
     glowColor: "#8B5CF6"
   },
